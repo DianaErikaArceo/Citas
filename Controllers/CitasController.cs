@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Citas.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class CitasController : ControllerBase
     {
         private readonly ICitasRepository repository;
