@@ -1,0 +1,26 @@
+<h1>Agenda Citas</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!citas"><em>Loading...</em></p>
+
+<button [routerLink]='["/citas-agregar"]' class="btn-primary">Agregar Cita</button>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="citas">
+  <thead>
+    <tr>
+      <th>Clave.</th>
+      <th>Paciente.</th>
+      <th>Fecha.</th>
+      <th>Tipo de Consulta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cita of citas">
+      <td>{{ cita.idCita }}</td>
+      <td>{{ cita.nombre }}</td>
+      <td>{{ cita.fecha }}</td>
+      <td>{{ cita.tipoConsulta }}</td>
+    </tr>
+  </tbody>
+</table>
